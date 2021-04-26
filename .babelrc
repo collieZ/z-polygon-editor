@@ -1,21 +1,40 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "modules": false,
-        "target": {
-          "browsers": [
-            "last 2 versions",
-            "safari >= 7"
-          ]
-        },
-        "useBuiltIns": "usage"
+        // "target": {
+        //   "browsers": [
+        //     "last 2 versions",
+        //     "safari >= 7"
+        //   ]
+        // },
+        // "useBuiltIns": "usage",
+        // "corejs": {
+        //   "version": 3,
+        //   "proposals": false
+        // }
       }
-    ],
-    "stage-2"
+    ]
+    // "stage-2"
   ],
   "plugins": [
-    "transform-class-properties"
+    "@babel/plugin-proposal-class-properties",
+    // "@babel/plugin-transform-runtime",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": false,  // 目前不需要polyfill
+        "proposals": true
+      }
+    ],
+    // {
+    //   "corejs": {
+    //     "version": 3,
+    //     "proposals": true
+    //   },
+    //   "useESModules": true
+    // },
   ]
 }

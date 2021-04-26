@@ -1,9 +1,9 @@
 const os = require('os')
 import pkjson from './package.json';
 import filesize from 'rollup-plugin-filesize';
-import babel from 'rollup-plugin-babel';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import { babel } from '@rollup/plugin-babel';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import { terser } from "rollup-plugin-terser";
 
 const isDev = process.argv.splice(2).indexOf('--pub') < 0;
@@ -22,8 +22,9 @@ export default {
     name: ProjectName,
     sourcemap: true
   },
+  // external: id => id.includes('@babel/runtime'),
   plugins: [
-    resolve(),
+    nodeResolve(),
     commonjs({
       // include: "node_modules/babel-runtime",
       sourceMap: false,  // Default: true
@@ -31,9 +32,8 @@ export default {
     filesize(),
     babel({
       exclude: 'node_modules/**', // 只编译我们的源代码
-      runtimeHelpers: true,
-      externalHelpers: false,
+      babelHelpers: 'runtime',
     }),
     terser({ numWorkers: cpuCount }),
-  ]
+  ],
 }
