@@ -1,6 +1,6 @@
 {
   "name": "z-polygon-editor",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "一个基于MarkJs二次开发的Canvas标注库, 用于电子围栏多边形标注",
   "main": "./build/z-polygon-editor.js",
   "scripts": {

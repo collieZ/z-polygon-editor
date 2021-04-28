@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/hentaizhou/z-polygon-editor/compare/v1.5.0...v1.6.0) (2021-04-28)
+
+
+### Features
+
+* update travis ([effe2d4](https://github.com/hentaizhou/z-polygon-editor/commit/effe2d4c00529052ba2af0fa3a3cdac60be76860))
+
 ## [1.5.0](https://github.com/hentaizhou/z-polygon-editor/compare/v1.4.2...v1.5.0) (2021-04-28)
 
 
