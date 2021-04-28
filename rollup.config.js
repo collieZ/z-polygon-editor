@@ -30,7 +30,7 @@ export default {
     }),
     filesize(),
     babel({
-      exclude: 'node_modules/**', // 只编1译我们的源代码
+      exclude: 'node_modules/**', // 只编译我们的源代码
       babelHelpers: 'runtime',
     }),
     terser({ numWorkers: cpuCount }),

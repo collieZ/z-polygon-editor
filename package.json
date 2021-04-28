@@ -7,7 +7,7 @@
     "start": "concurrently --names \"ROLLUP,HTTP\" -c \"bgBlue.bold,bgGreen.bold\" \"rimraf /build/\" \"rollup -c -w -m inline\" \"serve\"",
     "build": "rimraf ./build/ && rollup -c --pub",
     "release": "standard-version",
-    "pub": "git push --follow-tags origin main && npm publish --registry http://registry.npmjs.org",
+    "postversion": "git push --follow-tags origin main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
