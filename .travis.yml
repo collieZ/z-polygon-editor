@@ -2,13 +2,15 @@ language: node_js
 node_js:
 - lts/*
 script: skip
+before_deploy: npm run build
 deploy:
   provider: npm
   email: colliezhou@gmail.com
+  skip_cleanup: true
   api_key:
     secure: e/lAKOqBftc2o3hiBtxhlfwyayGIb7yD3FiD+CqlrHa/dKYykzr6zJV2RIfWblfKwfWXziZljxuyseEr9TH5OI/Q4b9N5w0RJsk4ne89su7Htcd+8OA1WkCq3kiERMA3fLkRZHDEL9kVyqNzI+alYTIuksgjFBtxnQzQeT9mAfx1vxmIHyOy8c9es9gOX6JehsMym3PuN8VtH/tbC5H7ibfWYMPht1v6uUr1DiKM2SbUkhb2cZI8WmsENqN82O1jLKTz95ZKaNzfprVQmoxNI2NVXbu3vYeNdVutaEP2FUaHIGjbvKtJsg79eav/eaCQwP7mh9xXpr1I3+tHEWBTmE7U2b7z+sBecYZSzRk4JAmaCQ5WzaQbMnmqE2d82pPdBsP51ho77HiwSbKn4nttcqRt668UObePbf7lQq5ueAhVq0UeboI/F1fAYEs3hfiiet0GLd+PErO4N2HBI52qshsj16FP9lxNNBXIbX+jX+xASoQa3LJ7jVRo0g443Jvs094/itDVt+jV9N0cB2ByeeHIQ4pLhWN1K42qIf0Y7tuXWUwMdMGg7FpkTdXs4DNvVBD7e6KfELpznbYVc7BVX0iHhS8spg4Wf1+84KggYGNA5wzpKYNyltFAbIpW26efTzmMggd5Ttw6zjwAnNqJIJzHtc1N5QC33/nrIACTDfc=
   on:
     tags: true
     repo: hentaizhou/z-polygon-editor
     branch: main
-  skip_cleanup: 'true'
+  tag: latest  
