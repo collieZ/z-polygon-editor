@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/hentaizhou/z-polygon-editor/compare/v1.3.0...v1.4.0) (2021-04-28)
+
+
+### Features
+
+* 更新npm脚本 ([287f77f](https://github.com/hentaizhou/z-polygon-editor/commit/287f77f84c9dd33f81ae576986ad901aa41849d6))
+
 ## [1.3.0](https://github.com/hentaizhou/z-polygon-editor/compare/v1.2.0...v1.3.0) (2021-04-28)
 
 
