@@ -22,7 +22,6 @@ export default {
     name: ProjectName,
     sourcemap: true
   },
-  // external: id => id.includes('@babel/runtime'),
   plugins: [
     nodeResolve(),
     commonjs({
