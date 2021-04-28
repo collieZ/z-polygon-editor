@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - lts/*
 script: skip
-before_deploy: npm run build
+before_deploy: npm i && npm run build
 deploy:
   provider: npm
   email: colliezhou@gmail.com
