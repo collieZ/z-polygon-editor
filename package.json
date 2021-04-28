@@ -1,11 +1,12 @@
 {
   "name": "z-polygon-editor",
-  "version": "1.1.4-0",
+  "version": "1.1.4",
   "description": "一个基于MarkJs二次开发的Canvas标注库, 用于电子围栏多边形标注",
   "main": "./build/z-polygon-editor.js",
   "scripts": {
     "start": "concurrently --names \"ROLLUP,HTTP\" -c \"bgBlue.bold,bgGreen.bold\" \"rimraf /build/\" \"rollup -c -w -m inline\" \"serve\"",
     "build": "rimraf ./build/ && rollup -c --pub",
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +16,9 @@
   ],
   "author": "colliezhou",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-transform-runtime": "^7.13.15",
@@ -27,7 +31,8 @@
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-watch": "^4.3.1",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "standard-version": "^9.2.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.13.17",
